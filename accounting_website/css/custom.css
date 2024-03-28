@@ -1,7 +1,29 @@
-.icon img{
+.icon img {
     opacity: 0.1;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     top: 98%;
+}
+
+.services-section {
+    padding: 5rem 0;
+    color: #252525 !important;
+}
+
+.services-section li {
+    font-size: 18px;
+}
+
+.services-section .note{
+    font-size: 16px;
+}
+
+.services-section ol>li {
+    font-weight: 600;
+}
+
+.services-section ul>li {
+    font-weight: 400;
+    list-style-type: disc;
 }
