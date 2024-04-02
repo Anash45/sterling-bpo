@@ -27,3 +27,22 @@
     font-weight: 400;
     list-style-type: disc;
 }
+.form-group{
+    position: relative !important;
+}
+.f-error{
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    margin-bottom: 0 !important;
+    z-index: 1;
+}
+
+.form-group .error{
+    color: red !important;
+    font-size: 12px;
+    margin-bottom: 0 !important;
+}
+.f-error label{
+    margin-bottom: 0 !important;
+}
