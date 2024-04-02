@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare JSON response
     $response = [
         'googleSheetsStatus' => $statusCodeFromGoogleScript == 200 ? true : true,
-        // 'emailStatus' => $emailStatus,
+        'emailStatus' => $emailStatus,
     ];
     // print_r($responseFromGoogleScript);
     // Return JSON response

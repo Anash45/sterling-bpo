@@ -49,7 +49,7 @@ $(document).ready(function () {
                     // Handle error
                     console.error(xhr.responseText);
                     console.log('An error occurred while processing your request.');
-                    $('.subscribe-form .formResponse').html(`<p class="alert alert-danger mb-0 p-2 mt-1">An error occurred while processing your request.</p>`);
+                    $(form).find('.formResponse').html(`<p class="alert alert-danger mb-0 p-2 mt-1">An error occurred while processing your request.</p>`);
                     $(form).find('.btn,.submit').val('Subscribe');
                 }
             });
