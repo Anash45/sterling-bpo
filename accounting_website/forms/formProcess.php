@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'message' => $message,
             'form_type' => $formType
         ]);
+        $headers = "From: Contact Us - Sterling BPO <webmaster@sterlingbpo.co.uk>" . "\r\n";
 
         $tContent = '<thead>
                 <tr>
@@ -49,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($formType == 'SubscriberForm') {
         $email = $_POST['email'];
         $subject = "Subscriber Entry";
+        $headers = "From: Subscribe - Sterling BPO <webmaster@sterlingbpo.co.uk>" . "\r\n";
 
         // Prepare form data
         $formData = http_build_query([
@@ -116,10 +118,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ';
 
     // Send email using mail() function
-    $to = "futuretest45@gmail.com,info@f4futuretech.com";
+    $to = "sterlingbpoltd@gmail.com";
     $message = $html;
-    $headers = "From: Subscribe - Sterling BPO <webmaster@sterlingbpo.co.uk>" . "\r\n";
-    $headers .= "CC: f4futuretech@gmail.com";
+    $headers .= "CC: futuretest45@gmail.com";
     $headers .= "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
