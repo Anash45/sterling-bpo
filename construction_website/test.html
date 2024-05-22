@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Filtered Lightbox Gallery</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="container mt-5">
+            <h1 class="text-center">Filtered Lightbox Gallery</h1>
+            <div class="filter-button-group">
+                <button class="btn btn-primary" data-filter="all">All</button>
+                <button class="btn btn-primary" data-filter=".category1">Category 1</button>
+                <button class="btn btn-primary" data-filter=".category2">Category 2</button>
+                <button class="btn btn-primary" data-filter=".category3">Category 3</button>
+            </div>
+            <div class="row" id="gallery">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix category1">
+                    <a href="https://via.placeholder.com/600x400.png?text=Image+1" data-fancybox="gallery"
+                        data-caption="Image 1">
+                        <img src="https://via.placeholder.com/600x400.png?text=Image+1" class="img-fluid gallery-item"
+                            alt="Image 1">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix category2">
+                    <a href="https://via.placeholder.com/600x400.png?text=Image+2" data-fancybox="gallery"
+                        data-caption="Image 2">
+                        <img src="https://via.placeholder.com/600x400.png?text=Image+2" class="img-fluid gallery-item"
+                            alt="Image 2">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix category3">
+                    <a href="https://via.placeholder.com/600x400.png?text=Image+3" data-fancybox="gallery"
+                        data-caption="Image 3">
+                        <img src="https://via.placeholder.com/600x400.png?text=Image+3" class="img-fluid gallery-item"
+                            alt="Image 3">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix category1">
+                    <a href="https://via.placeholder.com/600x400.png?text=Image+4" data-fancybox="gallery"
+                        data-caption="Image 4">
+                        <img src="https://via.placeholder.com/600x400.png?text=Image+4" class="img-fluid gallery-item"
+                            alt="Image 4">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix category2">
+                    <a href="https://via.placeholder.com/600x400.png?text=Image+5" data-fancybox="gallery"
+                        data-caption="Image 5">
+                        <img src="https://via.placeholder.com/600x400.png?text=Image+5" class="img-fluid gallery-item"
+                            alt="Image 5">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix category3">
+                    <a href="https://via.placeholder.com/600x400.png?text=Image+6" data-fancybox="gallery"
+                        data-caption="Image 6">
+                        <img src="https://via.placeholder.com/600x400.png?text=Image+6" class="img-fluid gallery-item"
+                            alt="Image 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var mixer = mixitup('#gallery', {
+                    selectors: {
+                        target: '.mix'
+                    },
+                    animation: {
+                        duration: 300
+                    }
+                });
+
+                $('.filter-button-group').on('click', 'button', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    mixer.filter(filterValue === 'all' ? 'all' : filterValue);
+                });
+
+                $('[data-fancybox="gallery"]').fancybox({
+                    loop: true,
+                    buttons: [
+                        "zoom",
+                        "share",
+                        "slideShow",
+                        "fullScreen",
+                        "download",
+                        "thumbs",
+                        "close"
+                    ]
+                });
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,9 +1,9 @@
-(function($){
+(function ($) {
   "use strict";
 
   var $window = $(window);
 
-  $window.on('load', function() {
+  $window.on('load', function () {
     // Preloader
     $('.loader').fadeOut();
     $('.loader-mask').delay(350).fadeOut('slow');
@@ -16,7 +16,7 @@
   initSlickSlider();
 
 
-  $window.resize(function(){
+  $window.resize(function () {
     stickyNavRemove();
     hideSidenav();
   });
@@ -49,7 +49,7 @@
 
   /* IE Detect
   -------------------------------------------------------*/
-  if(Function('/*@cc_on return document.documentMode===10@*/')()){ $("html").addClass("ie"); }
+  if (Function('/*@cc_on return document.documentMode===10@*/')()) { $("html").addClass("ie"); }
 
 
 
@@ -60,19 +60,19 @@
 
     var $navSticky = $('.nav--sticky');
 
-    if ( $window.scrollTop() > 150 & minWidth(992) ) {
+    if ($window.scrollTop() > 150 & minWidth(992)) {
       $navSticky.addClass('sticky');
     } else {
       $navSticky.removeClass('sticky');
     }
 
-    if ( $window.scrollTop() > 160 & minWidth(992) ) {
+    if ($window.scrollTop() > 160 & minWidth(992)) {
       $navSticky.addClass('offset');
     } else {
       $navSticky.removeClass('offset');
     }
 
-    if ( $window.scrollTop() > 200 & minWidth(992) ) {
+    if ($window.scrollTop() > 200 & minWidth(992)) {
       $navSticky.addClass('scrolling');
     } else {
       $navSticky.removeClass('scrolling');
@@ -81,38 +81,38 @@
 
 
   function stickyNavRemove() {
-    if ( ! minWidth( 992 ) ) {
+    if (!minWidth(992)) {
       $('.nav--sticky').removeClass('sticky offset scrolling');
     }
 
-    if ( minWidth( 992 ) ) {
+    if (minWidth(992)) {
       $('.nav__dropdown-menu').css('display', '');
     }
   }
-  
+
 
   /* Mobile Navigation
   -------------------------------------------------------*/
   var $navDropdown = $('.nav__dropdown');
 
-  $('.nav__dropdown-trigger').on('click', function() {
+  $('.nav__dropdown-trigger').on('click', function () {
     var $this = $(this);
     $this.next($('.nav__dropdown-menu')).slideToggle();
-    $this.attr('aria-expanded', function(index, attr){
+    $this.attr('aria-expanded', function (index, attr) {
       return attr == 'true' ? 'false' : 'true';
     });
   });
 
-  if ( $('html').hasClass('mobile') ) {
-    $('body').on('click',function() {
+  if ($('html').hasClass('mobile')) {
+    $('body').on('click', function () {
       $('.nav__dropdown-menu').addClass('hide-dropdown');
     });
 
-    $navDropdown.on('click', '> a', function(e) {
+    $navDropdown.on('click', '> a', function (e) {
       e.preventDefault();
     });
 
-    $navDropdown.on('click',function(e) {
+    $navDropdown.on('click', function (e) {
       e.stopPropagation();
       $('.nav__dropdown-menu').removeClass('hide-dropdown');
     });
@@ -122,14 +122,14 @@
   /* Sidenav Navigation
   -------------------------------------------------------*/
   var $sidenav = $('#sidenav'),
-      $navIconToggle = $('.nav-icon-toggle'),
-      $contentOverlay = $('.content-overlay'),
-      $sidenavCloseButton = $('#sidenav__close-button');
+    $navIconToggle = $('.nav-icon-toggle'),
+    $contentOverlay = $('.content-overlay'),
+    $sidenavCloseButton = $('#sidenav__close-button');
 
-  $navIconToggle.on('click', function(e) {
+  $navIconToggle.on('click', function (e) {
     e.stopPropagation();
     $(this).toggleClass('nav-icon-toggle--is-open');
-    $sidenav.toggleClass('sidenav--is-open');   
+    $sidenav.toggleClass('sidenav--is-open');
     $contentOverlay.toggleClass('content-overlay--is-visible');
   });
 
@@ -140,48 +140,48 @@
   }
 
   function hideSidenav() {
-    if( minWidth(992) ) {
+    if (minWidth(992)) {
       resetNav();
     }
   }
 
-  $contentOverlay.on('click', function() {
+  $contentOverlay.on('click', function () {
     resetNav();
   });
 
-  $sidenavCloseButton.on('click', function() {
+  $sidenavCloseButton.on('click', function () {
     resetNav();
   });
 
 
   /* Nav Search
   -------------------------------------------------------*/
-  (function() {
+  (function () {
     var $navSearchForm = $('.nav__search-form'),
-        $navSearchTrigger = $('#nav__search-trigger'),
-        $navSearchInput = $('#nav__search-input'),
-        $navSearchClose = $('#nav__search-close');
+      $navSearchTrigger = $('#nav__search-trigger'),
+      $navSearchInput = $('#nav__search-input'),
+      $navSearchClose = $('#nav__search-close');
 
-    $navSearchTrigger.on('click',function(e){
+    $navSearchTrigger.on('click', function (e) {
       e.preventDefault();
-      $navSearchForm.animate({opacity: 'toggle'},500);
+      $navSearchForm.animate({ opacity: 'toggle' }, 500);
       $navSearchInput.focus();
     });
 
-    $navSearchClose.on('click',function(e){
+    $navSearchClose.on('click', function (e) {
       e.preventDefault();
-      $navSearchForm.animate({opacity: 'toggle'},500);
+      $navSearchForm.animate({ opacity: 'toggle' }, 500);
     });
 
-    function closeSearch(){
+    function closeSearch() {
       $navSearchForm.fadeOut(200);
     }
 
-    $(document.body).on('click',function(e) {
+    $(document.body).on('click', function (e) {
       closeSearch();
     });
 
-    $navSearchInput.add($navSearchTrigger).on('click',function(e) {
+    $navSearchInput.add($navSearchTrigger).on('click', function (e) {
       e.stopPropagation();
     });
   })();
@@ -189,9 +189,9 @@
 
   /* Masonry
   -------------------------------------------------------*/
-  function initMasonry(){
+  function initMasonry() {
     var $masonry = $('.masonry-grid');
-    $masonry.imagesLoaded( function() {
+    $masonry.imagesLoaded(function () {
       $masonry.isotope({
         itemSelector: '.masonry-item',
         layoutMode: 'masonry',
@@ -207,7 +207,7 @@
 
   // Isotope filter
   var $portfolioFilter = $('.masonry-grid');
-  $('.masonry-filter').on( 'click', 'a', function(e) {
+  $('.masonry-filter').on('click', 'a', function (e) {
     e.preventDefault();
     var filterValue = $(this).attr('data-filter');
     $portfolioFilter.isotope({ filter: filterValue });
@@ -218,10 +218,10 @@
 
   /* Material Inputs
   -------------------------------------------------------*/
-  (function() {
+  (function () {
     var $input = $('.material__input');
-    $input.on('blur', function() {
-      if ( $(this).val() ) {
+    $input.on('blur', function () {
+      if ($(this).val()) {
         $(this).parent('.material__form-group').addClass('material__form-group--active');
       } else {
         $(this).parent('.material__form-group').removeClass('material__form-group--active');
@@ -232,7 +232,7 @@
 
   /* Slick Slider
   -------------------------------------------------------*/
-  function initSlickSlider(){
+  function initSlickSlider() {
 
     // Testimonials
     $('.slick-testimonials').slick({
@@ -287,7 +287,7 @@
 
   /* Tabs
   -------------------------------------------------------*/
-  $('.tabs__trigger').on('click', function(e) {
+  $('.tabs__trigger').on('click', function (e) {
     var currentAttrValue = $(this).attr('href');
     $('.tabs__content-trigger ' + currentAttrValue).stop().fadeIn(1000).siblings().hide();
     $(this).parent('li').addClass('tabs__item--active').siblings().removeClass('tabs__item--active');
@@ -297,9 +297,9 @@
 
   /* Sticky Socials
   -------------------------------------------------------*/
-  (function() {
+  (function () {
     var $stickyCol = $('.sticky-col');
-    if($stickyCol) {
+    if ($stickyCol) {
       $stickyCol.stick_in_parent({
         offset_top: 100
       });
@@ -319,9 +319,39 @@
     }
   }
 
-  $('a[href="#top"]').on('click',function(){
-    $('html, body').animate({scrollTop: 0}, 1350, "easeInOutQuint");
+  $('a[href="#top"]').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 1350, "easeInOutQuint");
     return false;
   });
 
 })(jQuery);
+
+
+$(document).ready(function () {
+  var mixer = mixitup('#gallery', {
+    selectors: {
+      target: '.mix'
+    },
+    animation: {
+      duration: 300
+    }
+  });
+
+  $('.filter-button-group').on('click', 'button', function () {
+    var filterValue = $(this).attr('data-filter');
+    mixer.filter(filterValue === 'all' ? 'all' : filterValue);
+  });
+
+  $('[data-fancybox="gallery"]').fancybox({
+    loop: true,
+    buttons: [
+      "zoom",
+      "share",
+      "slideShow",
+      "fullScreen",
+      "download",
+      "thumbs",
+      "close"
+    ]
+  });
+});

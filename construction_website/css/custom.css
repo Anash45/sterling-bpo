@@ -1,3 +1,79 @@
 .logo{
     height: 60px !important;
 }
+
+.tp-bgimg.defaultimg::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+} 
+
+.about-img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 0 10px #c0c0c0;
+}
+.footer-logo{
+    filter: drop-shadow(0 0 1px #FFF);
+}
+.footer-logo-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFF !important;
+    line-height: 34px;
+}
+.foot-intro{
+    margin-top: 10px;
+}
+
+.nav__holder.nav--sticky.sticky .logo{
+    height: 50px !important;
+}
+.filter-button-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-button-group button {
+    margin: 5px;
+}
+
+.gallery-item {
+    margin-bottom: 20px;
+    height: 190px;
+    object-fit: cover;
+}
+.footer__bottom{
+    padding: 24px 0;
+}
+.mt-5{
+    margin-top: 48px;
+}
+
+.gallery .gallery-icon,.gallery .gallery-icon img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.project-image{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.features .service-1__feature{
+    display: flex;
+    gap: 4px;
+}
+.features{
+    margin-bottom: 20px;
+}
