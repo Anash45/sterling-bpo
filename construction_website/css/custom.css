@@ -2,7 +2,7 @@
     height: 60px !important;
 }
 
-.tp-bgimg.defaultimg::after{
+/* .tp-bgimg.defaultimg::after{
     position: absolute;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6) !important;
-} 
+}  */
 
 .about-img{
     height: 100%;
@@ -76,4 +76,21 @@
 }
 .features{
     margin-bottom: 20px;
+}
+
+.hero-text,.small-text{
+    background-color: black;
+    padding: 10px 30px;
+}
+
+.mb-5{
+    margin-bottom: 3rem;
+}
+
+.features-about li{
+    margin-bottom: 10px;
+}
+.features-about li span,
+.features-about li i{
+    font-size: 1.1rem;
 }
