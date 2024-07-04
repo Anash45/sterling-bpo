@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Whitney A";
+    src: url(../fonts/whitneybook.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Whitney A";
+    src: url(../fonts/whitneymedium.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Whitney A";
+    src: url(../fonts/whitneysemibold.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Whitney A";
+    src: url(../fonts/whitneybold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "ITC Caslon";
+    src: url(../fonts/ITC\ Caslon\ 224\ Std\ Book.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "ITC Caslon";
+    src: url(../fonts/ITC\ Caslon\ 224\ Std\ Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "ITC Caslon";
+    src: url(../fonts/ITC\ Caslon\ 224\ Std\ Bold.ttf);
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: "ITC Caslon";
+    src: url(../fonts/ITC\ Caslon\ 224\ Std\ Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url(../fonts/PlayfairDisplay-Bold.ttf);
+    font-weight: 700;
+}

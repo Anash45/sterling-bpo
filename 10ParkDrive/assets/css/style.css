@@ -1,0 +1,93 @@
+@import url(./fonts.css);
+
+.f-whitney {
+    font-family: "Whitney A";
+}
+
+.f-playfair {
+    font-family: "Playfair Display";
+}
+
+.f-itc {
+    font-family: "ITC Caslon";
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #4a4b4f;
+}
+
+.navbar {
+    background-color: #f0f0f0 !important;
+}
+
+.h-logo {
+    height: 80px;
+}
+
+.nav-link {
+    padding: 8px 16px !important;
+    color: #4a4b4f !important;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    font-family: "ITC Caslon", "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #990000 !important;
+}
+
+.c-red {
+    color: #990000 !important;
+}
+
+.obj-cover {
+    object-fit: cover;
+}
+
+.obj-contain {
+    object-fit: contain;
+}
+
+.home-full-img {
+    position: relative;
+}
+
+.home-full-img::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.home-full-img::before{
+    height: 20%;
+    top: 0;
+    background-image: linear-gradient(to top, transparent, #f0f0f0);
+}
+
+/* .home-full-img::after{
+    height: 10%;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, transparent, #f0f0f0);
+} */
