@@ -1,19 +1,24 @@
 @import url(./fonts.css);
 
 .f-whitney {
-    font-family: "Whitney A";
-}
-
-.f-playfair {
-    font-family: "Playfair Display";
+    font-family: "Whitney A", Arial, Helvetica, sans-serif;
 }
 
 .f-itc {
-    font-family: "ITC Caslon";
+    font-family: "ITC Caslon", "Playfair Display", Georgia, 'Times New Roman', Times, serif;
 }
 
 .fw-semibold {
     font-weight: 600;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .fw-black {
@@ -23,6 +28,24 @@
 body {
     background-color: #f0f0f0;
     color: #4a4b4f;
+    font-family: "Whitney A", Arial, Helvetica, sans-serif;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url(../images/hamburger.png);
+}
+
+.navbar-toggler:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-toggler {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    border: 0 !important;
 }
 
 .navbar {
@@ -72,7 +95,7 @@ h6 {
     position: relative;
 }
 
-.home-full-img::before {
+/* .home-full-img::before {
     content: "";
     position: absolute;
     left: 0;
@@ -84,6 +107,188 @@ h6 {
     height: 20%;
     top: 0;
     background-image: linear-gradient(to top, transparent, #f0f0f0);
+} */
+.fade-overlay {
+    background: linear-gradient(0deg, hsla(0, 0%, 100%, .001) 80%, #f0f0f0);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.f-logo img {
+    height: 50px;
+}
+
+footer {
+    font-size: 14px;
+}
+
+footer a {
+    transition: 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #990000;
+}
+
+.f-social-icon {
+    display: flex;
+    height: 28px;
+    width: 28px;
+    border: 1px solid #990000;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #990000;
+    border-radius: 100px;
+    color: #FFFFFF;
+}
+
+.f-social-icon:hover {
+    background-color: #FFFFFF;
+    color: #990000;
+}
+
+.location-sec {
+    background-color: #586267;
+}
+
+.title-md {
+    font-size: 48px;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.gallery-item {
+    width: calc(50% - 20px);
+    /* Example width, adjust based on your layout */
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projects-gallery .gallery-item {
+    width: calc(33% - 20px);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.blueimp-gallery-display>* {
+    display: block !important;
+}
+
+@keyframes loading-inner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.loading-inner div {
+    position: absolute;
+    animation: loading-inner 1s linear infinite;
+    width: 160px;
+    height: 160px;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 0 0 #990000;
+    transform-origin: 80px 82.5px;
+}
+
+.loadingio {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loading-inner {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.loading-inner div {
+    box-sizing: content-box;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #cdcdcd !important;
+}
+
+.btn-submit {
+    background-color: rgb(74, 75, 79) !important;
+    border-color: 1px solid rgb(74, 75, 79) !important;
+    border-radius: 0;
+    color: #FFFFFF !important;
+}
+
+.btn-submit:hover {
+    background-color: rgb(119, 119, 121) !important;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 920px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title-md {
+        font-size: 40px;
+    }
+
+    .projects-gallery .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .title-md {
+        font-size: 32px;
+    }
+
+    .location-sec img {
+        aspect-ratio: 4/3;
+    }
+
+    .gallery-item,
+    .projects-gallery .gallery-item {
+        width: 100%;
+    }
 }
 
 /* .home-full-img::after{

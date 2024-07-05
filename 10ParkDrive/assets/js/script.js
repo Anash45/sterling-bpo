@@ -21,3 +21,7 @@
 
 // Initiate AOS
 AOS.init();
+
+$(document).ready(function () {
+    $('.loadingio').fadeOut(500);    
+})

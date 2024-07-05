@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>10 Park Drive</title>
+        <link rel="shortcut icon" href="./assets/images/ArzulMusheerPNG_logo.png" type="image/x-icon">
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.4.0/css/blueimp-gallery.min.css"
@@ -13,18 +14,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
             integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
     <body>
-        <header class="d-flex flex-column gap-3">
+        <header class="d-flex flex-column gap-3 position-relative">
             <div class="text-center pb-2 pt-3 header-top">
                 <a href="./index.html" class="d-flex flex-column align-items-center mx-auto">
                     <img src="./assets/images/ArzulMusheerPNG_logo.png" alt="Logo" class="h-logo">
                 </a>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg position-static py-lg-1 py-0 navbar-light bg-light">
+                <div class="container-fluid position-static">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -43,107 +47,176 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./projects.html">Our Projects</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Contact Us</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <section class="hero" data-aos="fade-up">
-            <img src="./assets/images/face1.jpg" alt="Hero Image" class="img-fluid w-100">
-        </section>
-        <section class="py-5">
-            <div class="container">
-                <div class="sec-heading mt-4">
-                    <h1 class="text-center fw-black" data-aos="fade-up"> <span class="d-block">Luxury Apartments</span>
-                        <span class="d-block">Emaar DHA, Islamabad</span>
-                    </h1>
-                    <p data-aos="fade-up" class="mb-0 text-md-start text-center py-4 text-center"> 10 Park Drive
-                        introduces a premier offering in Pakistan's capital city, Islamabad; an exquisite collection of
-                        40 luxury apartments. Nestled in a prime location, this development combines modern elegance
-                        with unparalleled comfort. Each apartment is meticulously designed to offer a luxurious living
-                        experience, complemented by state-of-the-art amenities and breath taking views. Residents will
-                        enjoy exclusive access to boutique shops, fine dining restaurants, and a versatile community
-                        space, creating a vibrant and dynamic living environment. 10 Park Drive, Islamabad sets a new
-                        standard in luxury living, promising sophistication and convenience at every turn. </p>
-                </div>
-                <div class="row py-5 gap-md-0 gap-4 flex-md-row flex-column-reverse">
-                    <div class="col-md-6 d-flex flex-column gap-4">
-                        <img src="./assets/images/home-img-1.jpg" alt="About" data-aos="fade-up"
-                            class="w-100 flex-grow-1 obj-cover img-fluid">
-                        <img src="./assets/images/home-img-2.png" alt="About" data-aos="fade-up"
-                            class="w-100 flex-grow-1 obj-cover img-fluid">
+        <main>
+            <section class="hero" data-aos="fade-up" data-aos-duration="1500">
+                <img src="./assets/images/face1.jpg" alt="Hero Image" class="img-fluid w-100">
+            </section>
+            <section class="py-5">
+                <div class="container">
+                    <div class="sec-heading mt-4">
+                        <h1 class="text-center fw-black" data-aos="fade-up" data-aos-duration="1500"> <span
+                                class="d-block">Luxury Apartments</span>
+                            <span class="d-block">Emaar DHA, Islamabad</span>
+                        </h1>
+                        <p data-aos="fade-up" data-aos-duration="1500"
+                            class="mb-0 text-md-start text-center py-4 text-center"> 10 Park Drive introduces a premier
+                            offering in Pakistan's capital city, Islamabad; an exquisite collection of 40 luxury
+                            apartments. Nestled in a prime location, this development combines modern elegance with
+                            unparalleled comfort. Each apartment is meticulously designed to offer a luxurious living
+                            experience, complemented by state-of-the-art amenities and breath taking views. Residents
+                            will enjoy exclusive access to boutique shops, fine dining restaurants, and a versatile
+                            community space, creating a vibrant and dynamic living environment. 10 Park Drive, Islamabad
+                            sets a new standard in luxury living, promising sophistication and convenience at every
+                            turn. </p>
                     </div>
-                    <div
-                        class="col-md-6 d-flex flex-column text-md-start text-center justify-content-center ps-md-5 ps-0 py-4">
-                        <h2 class="fw-black" data-aos="fade-up">Owning A Lifestyle, Not Just An Address</h2>
-                        <p data-aos="fade-up" class="mb-0"> In essence, owning property at 10 Park Drive in Emaar
-                            Islamabad isn't just about having an address; it's about embracing a lifestyle defined by
-                            luxury, community, and holistic well-being. It offers a unique opportunity to live in a
-                            place where every detail is designed to enhance the quality of life and where residents can
-                            truly own a lifestyle, not just a home. <br><br> Emaar Islamabad properties are renowned for
-                            their luxurious amenities and high-quality construction. From three tier security to
-                            beautifully landscaped gardens and swimming pools, every aspect of living is crafted to
-                            enhance comfort and convenience. The architecture and interior design at 10 Park Drive
-                            reflect elegance and sophistication. Every detail is meticulously planned to offer residents
-                            a visually stunning environment that complements their lifestyle. </p>
+                    <div class="row py-5 gap-md-0 gap-4 flex-md-row flex-column-reverse">
+                        <div class="col-md-6 d-flex flex-column gap-4">
+                            <img src="./assets/images/home-img-1.jpg" alt="About" data-aos="fade-up"
+                                data-aos-duration="1500" class="w-100 flex-grow-1 obj-cover img-fluid">
+                            <img src="./assets/images/home-img-2.png" alt="About" data-aos="fade-up"
+                                data-aos-duration="1500" class="w-100 flex-grow-1 obj-cover img-fluid">
+                        </div>
+                        <div
+                            class="col-md-6 d-flex flex-column text-md-start text-center justify-content-center ps-md-5 ps-0 py-4">
+                            <h2 class="fw-black" data-aos="fade-up" data-aos-duration="1500">Owning A Lifestyle, Not
+                                Just An Address</h2>
+                            <p data-aos="fade-up" data-aos-duration="1500" class="mb-0"> In essence, owning property at
+                                10 Park Drive in Emaar Islamabad isn't just about having an address; it's about
+                                embracing a lifestyle defined by luxury, community, and holistic well-being. It offers a
+                                unique opportunity to live in a place where every detail is designed to enhance the
+                                quality of life and where residents can truly own a lifestyle, not just a home. <br><br>
+                                Emaar Islamabad properties are renowned for their luxurious amenities and high-quality
+                                construction. From three tier security to beautifully landscaped gardens and swimming
+                                pools, every aspect of living is crafted to enhance comfort and convenience. The
+                                architecture and interior design at 10 Park Drive reflect elegance and sophistication.
+                                Every detail is meticulously planned to offer residents a visually stunning environment
+                                that complements their lifestyle. </p>
+                        </div>
                     </div>
-                </div>
-                <div class="row py-5 gap-md-0 gap-4">
-                    <div
-                        class="col-md-6 d-flex flex-column text-md-start text-center justify-content-center pe-md-5 pe-0">
-                        <h2 class="fw-black" data-aos="fade-up">A Welcome Home Unlike Any Other</h2>
-                        <p data-aos="fade-up" class="mb-0"> Experience a comforting elegance to your home. Each day,
-                            returning home becomes a serene ritual as you progress towards the secure and peaceful
-                            sanctuary of your living space. Embrace your personal haven year-round—a tranquil retreat
-                            offering respite amidst the vibrant heartbeat of Emaar, DHA Islamabad. </p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="./assets/images/home-img-3.jpg" alt="About" data-aos="fade-up"
-                            class="w-100 h-100 obj-cover img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="py-4 col-md-6 mx-auto">
-                <h2 data-aos="fade-up" class="text-center mb-4">A Ne w Chapter Added To The Story Of Emaar Pakistan</h2>
-            </div>
-            <div class="home-full-img">
-                <img src="./assets/images/home-img-4.jpg" alt="Home Image" class="w-100 img-fluid" data-aos="fade-up">
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="py-4 col-md-6 mx-auto">
-                <h2 data-aos="fade-up" class="text-center mb-4">An Open Yet Intimate Space That You Are Invited To Make
-                    Your Own.</h2>
-            </div>
-            <div class="home-full-img">
-                <img src="./assets/images/home-img-5.jpg" alt="Home Image" class="w-100 img-fluid" data-aos="fade-up">
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="container">
-                <div class="row gap-md-0 gap-4">
-                    <div
-                        class="col-md-6 d-flex flex-column text-md-start text-center justify-content-center pe-md-5 pe-0 py-4">
-                        <h2 class="fw-black" data-aos="fade-up">Modern Comfort And Effortless Living</h2>
-                        <p data-aos="fade-up" class="mb-0"> Elegantly blending modern design with timeless
-                            sophistication, 10 Park Drive offers an ideal residence for those seeking luxurious living
-                            in a welcoming atmosphere. Each apartment is meticulously crafted, boasting spacious
-                            interiors that exude both grandeur and intimacy. Floor-to-ceiling windows and sliding glass
-                            doors ensure abundant natural light, creating a radiant ambiance throughout. The open-plan
-                            layout enhances the space, providing a perfect setting for gatherings and everyday comfort
-                            alike. </p>
-                    </div>
-                    <div class="col-md-6 d-flex flex-column gap-4">
-                        <img src="./assets/images/home-img-1.jpg" alt="About" data-aos="fade-up"
-                            class="w-100 flex-grow-1 obj-cover img-fluid">
-                        <img src="./assets/images/home-img-2.png" alt="About" data-aos="fade-up"
-                            class="w-100 flex-grow-1 obj-cover img-fluid">
+                    <div class="row py-5 gap-md-0 gap-4">
+                        <div
+                            class="col-md-6 d-flex flex-column text-md-start text-center justify-content-center pe-md-5 pe-0">
+                            <h2 class="fw-black" data-aos="fade-up" data-aos-duration="1500">A Welcome Home Unlike Any
+                                Other</h2>
+                            <p data-aos="fade-up" data-aos-duration="1500" class="mb-0"> Experience a comforting
+                                elegance to your home. Each day, returning home becomes a serene ritual as you progress
+                                towards the secure and peaceful sanctuary of your living space. Embrace your personal
+                                haven year-round—a tranquil retreat offering respite amidst the vibrant heartbeat of
+                                Emaar, DHA Islamabad. </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="./assets/images/home-img-3.jpg" alt="About" data-aos="fade-up"
+                                data-aos-duration="1500" class="w-100 h-100 obj-cover img-fluid">
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section class="py-5">
+                <div class="py-4 col-md-6 mx-auto px-4">
+                    <h2 data-aos="fade-up" data-aos-duration="1500" class="text-center mb-4">A New Chapter Added To The
+                        Story Of Emaar Pakistan </h2>
+                </div>
+                <div class="home-full-img">
+                    <div class="fade-overlay" data-aos="fade-up" data-aos-duration="1500"></div>
+                    <img src="./assets/images/home-img-4.jpg" alt="Home Image" class="w-100 img-fluid"
+                        data-aos="fade-up" data-aos-duration="1500">
+                </div>
+            </section>
+            <section class="py-5">
+                <div class="py-4 col-md-6 mx-auto px-4">
+                    <h2 data-aos="fade-up" data-aos-duration="1500" class="text-center mb-4">An Open Yet Intimate Space
+                        That You Are Invited To Make Your Own.</h2>
+                </div>
+                <div class="home-full-img">
+                    <div class="fade-overlay" data-aos="fade-up" data-aos-duration="1500"></div>
+                    <img src="./assets/images/home-img-5.jpg" alt="Home Image" class="w-100 img-fluid"
+                        data-aos="fade-up" data-aos-duration="1500">
+                </div>
+            </section>
+            <section class="py-5">
+                <div class="container">
+                    <div class="row gap-md-0 gap-4">
+                        <div
+                            class="col-md-6 d-flex flex-column text-md-start text-center justify-content-center pe-md-5 pe-0 py-4">
+                            <h2 class="fw-black" data-aos="fade-up" data-aos-duration="1500">Modern Comfort And
+                                Effortless Living</h2>
+                            <p data-aos="fade-up" data-aos-duration="1500" class="mb-0"> Elegantly blending modern
+                                design with timeless sophistication, 10 Park Drive offers an ideal residence for those
+                                seeking luxurious living in a welcoming atmosphere. Each apartment is meticulously
+                                crafted, boasting spacious interiors that exude both grandeur and intimacy.
+                                Floor-to-ceiling windows and sliding glass doors ensure abundant natural light, creating
+                                a radiant ambiance throughout. The open-plan layout enhances the space, providing a
+                                perfect setting for gatherings and everyday comfort alike. </p>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column gap-4">
+                            <img src="./assets/images/home-img-1.jpg" alt="About" data-aos="fade-up"
+                                data-aos-duration="1500" class="w-100 flex-grow-1 obj-cover img-fluid">
+                            <img src="./assets/images/home-img-2.png" alt="About" data-aos="fade-up"
+                                data-aos-duration="1500" class="w-100 flex-grow-1 obj-cover img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="py-5">
+            <div class="container py-5">
+                <div
+                    class="d-flex justify-content-between flex-sm-row flex-column gap-4 align-items-center text-sm-start text-center">
+                    <div class="f-1">
+                        <div class="f-logo">
+                            <img src="./assets/images/ArzulMusheerPNG_logo.png" alt="Footer Logo" class="img-fluid">
+                        </div>
+                        <h6 class="mt-2 mb-1 fw-bold text-dark f-whitney">Arzul Musheer</h6>
+                        <address class="fw-medium my-1"> 10 Park Drive, Emaar, <br> DHA Islamabad Islamabad PK
+                        </address>
+                        <p class="my-1">
+                            <a href="#" class="fw-medium">+92 123 123 4123</a>
+                        </p>
+                        <p class="my-1">
+                            <a href="#" class="fw-medium">W: arzulmusheer.com</a>
+                        </p>
+                    </div>
+                    <div class="f-2">
+                        <h5 class="mb-3 c-red fw-semibold f-whitney">Links</h5>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li><a class="text-decoration-underline" href="index.html">Home</a></li>
+                            <li><a class="text-decoration-underline" href="location.html">Location</a></li>
+                            <li><a class="text-decoration-underline" href="interiors.html">Interiors</a></li>
+                            <li><a class="text-decoration-underline" href="projects.html">Our Projects</a></li>
+                            <li><a class="text-decoration-underline" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-2">
+                        <div class="mb-4">
+                            <h5 class="mb-3 c-red fw-semibold f-whitney">Hours</h5>
+                            <p class="fw-medium"> Monday - Friday: 10AM - 7PM <br> Saturday & Sunday: 11AM - 5PM </p>
+                        </div>
+                        <div class="mb-0">
+                            <h5 class="mb-3 c-red fw-semibold f-whitney">Follow Us</h5>
+                            <div
+                                class="d-flex align-items-center gap-3 justify-content-sm-start justify-content-center">
+                                <a href="#" class="f-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="f-social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="f-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </footer>
+        <div class="loadingio">
+            <div class="loading-inner">
+                <div></div>
+            </div>
+        </div>
     </body>
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
