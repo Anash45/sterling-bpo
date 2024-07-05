@@ -259,10 +259,17 @@ footer a:hover {
     background-color: rgb(119, 119, 121) !important;
 }
 
+header .h-logo{
+    filter: drop-shadow(0 0 1px #616161);
+}
+
 section p{
     text-align: justify;
 }
-
+.error{
+    color: red;
+    font-size: 14px;
+}
 @media (min-width: 992px) {
     .container {
         max-width: 920px;

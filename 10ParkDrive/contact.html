@@ -24,7 +24,7 @@
         <header class="d-flex flex-column gap-3 position-relative">
             <div class="text-center pb-2 pt-3 header-top">
                 <a href="./index.html" class="d-flex flex-column align-items-center mx-auto">
-                    <img src="./assets/images/ArzulMusheerPNG_logo.png" alt="Logo" class="h-logo">
+                    <img src="./assets/images/10ParkDrivelogoFinal.png" alt="Logo" class="h-logo">
                 </a>
             </div>
             <nav class="navbar navbar-expand-lg position-static py-lg-1 py-0 navbar-light bg-light">
@@ -42,10 +42,10 @@
                                 <a class="nav-link" href="./location.html">Location</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./interiors.html">Interiors</a>
+                                <a class="nav-link" href="./floor-plans.html">Floor Plans</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./projects.html">Our Projects</a>
+                                <a class="nav-link" href="./gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="./contact.html">Contact Us</a>
@@ -62,11 +62,11 @@
                     <div class="row flex-md-row flex-column-reverse gap-md-0 gap-5">
                         <!-- Left Side: Contact Info -->
                         <div class="col-md-4 contact-info flex-column d-flex justify-content-center pb-md-5 pb-0">
-                            <p><strong>Email:</strong> <a href="mailto:Info@arzulmusheer.com">Info@arzulmusheer.com</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:Info@arzulmusheer.com">Info@arzulmusheer.com</a>
+                            </p>
                             <p><strong>Telephone:</strong> <a href="tel:+92 304 111 5030">UAN: 0304 111 5030</a></p>
                             <p><strong>Address:</strong> 10 Park Drive, Emaar, <br> DHA Islamabad Islamabad PK</p>
-                            <div
-                                class="d-flex align-items-center gap-3">
+                            <div class="d-flex align-items-center gap-3">
                                 <a href="#" class="f-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#" class="f-social-icon"><i class="fa-brands fa-x-twitter"></i></a>
                                 <a href="#" class="f-social-icon"><i class="fa-brands fa-instagram"></i></a>
@@ -74,23 +74,24 @@
                         </div>
                         <!-- Right Side: Contact Form -->
                         <div class="col-md-8 contact-form">
-                            <form method="post" action="" novalidate class="needs-validation">
+                            <form method="post" action="" novalidate class="contactForm">
                                 <div class="mb-4">
-                                    <input type="text" class="form-control px-0" id="name" placeholder="Your Name"
+                                    <input type="text" class="form-control px-0" id="name" name="name" placeholder="Your Name"
                                         required>
                                 </div>
                                 <div class="mb-4">
-                                    <input type="email" class="form-control px-0" id="email" placeholder="Your Email"
+                                    <input type="email" class="form-control px-0" id="email" name="email" placeholder="Your Email"
                                         required>
                                 </div>
                                 <div class="mb-4">
-                                    <input type="text" class="form-control px-0" id="subject" placeholder="Subject"
+                                    <input type="text" class="form-control px-0" id="subject" name="subject" placeholder="Subject"
                                         required>
                                 </div>
                                 <div class="mb-4">
-                                    <textarea class="form-control px-0" id="message" rows="4" placeholder="Your Message"
+                                    <textarea class="form-control px-0" id="message" name="message" rows="4" placeholder="Your Message"
                                         required></textarea>
                                 </div>
+                                <div class="formResponse"></div>
                                 <button type="submit" class="btn btn-submit">Send Message</button>
                             </form>
                         </div>
@@ -127,8 +128,8 @@
                         <ul class="list-unstyled d-flex flex-column gap-2">
                             <li><a class="text-decoration-underline" href="index.html">Home</a></li>
                             <li><a class="text-decoration-underline" href="location.html">Location</a></li>
-                            <li><a class="text-decoration-underline" href="interiors.html">Interiors</a></li>
-                            <li><a class="text-decoration-underline" href="projects.html">Our Projects</a></li>
+                            <li><a class="text-decoration-underline" href="floor-plans.html">Floor Plans</a></li>
+                            <li><a class="text-decoration-underline" href="gallery.html">Gallery</a></li>
                             <li><a class="text-decoration-underline" href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
@@ -164,6 +165,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
         integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
 </html>
