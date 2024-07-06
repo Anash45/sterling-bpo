@@ -2,6 +2,7 @@
 // Process form data
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tContent = '';
+    // echo json_encode($_REQUEST);
     $formType = $_REQUEST['form_type'];
     if ($formType == 'ContactForm') {
         // Sanitize input data if necessary
@@ -10,19 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subject = $_POST['subject'];
         $message = $_POST['message'];
 
-        // Prepare form data
-        $formData = http_build_query([
-            'name' => $name,
-            'email' => $email,
-            'subject' => $subject,
-            'message' => $message,
-            'form_type' => $formType
-        ]);
-        $headers = "From: Contact Us - Sterling BPO <webmaster@sterlingbpo.co.uk>" . "\r\n";
+        $headers = "From: Contact Us - 10 Park Drive <webmaster@arzulmusheer.com>" . "\r\n";
 
         $tContent = '<thead>
                 <tr>
-                    <th colspa="2">BPO Contact Us</th>
+                    <th colspa="2">10 Park Drive - Contact Us</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,28 +37,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </tr>
         </tbody>';
 
-    } elseif ($formType == 'SubscriberForm') {
-        $email = $_POST['email'];
-        $subject = "Subscriber Entry";
-        $headers = "From: Subscribe - Sterling BPO <webmaster@sterlingbpo.co.uk>" . "\r\n";
+    } elseif (isset($_POST['form_type']) && $_POST['form_type'] == 'RegisterForm') {
+        // Sanitize input data to prevent XSS and other attacks
+        $first_name = htmlspecialchars($_POST['first_name']);
+        $last_name = htmlspecialchars($_POST['last_name']);
+        $email = htmlspecialchars($_POST['email']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $working_with_realtor = htmlspecialchars($_POST['working_with_realtor']);
+        $brokerage = htmlspecialchars($_POST['brokerage']);
+        
+        // Sanitize and implode contact methods
+        $contact_methods = array_map('htmlspecialchars', $_POST['contact_method']);
+        $contact_method_str = implode(', ', $contact_methods);
+        
+        $interested_in = htmlspecialchars($_POST['interested_in']);
+        $heard_about_us = htmlspecialchars($_POST['heard_about_us']);
 
-        // Prepare form data
-        $formData = http_build_query([
-            'email' => $email,
-            'form_type' => $formType
-        ]);
+        $subject = "Register - Arzul Musheer";
 
-        $tContent = '<thead>
+        // Prepare the email headers (optional, for further processing)
+        $headers = "From: Register Form <webmaster@arzulmusheer.com>" . "\r\n";
+
+        // Create the HTML table content
+        $tContent = '<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse;">
+            <thead>
                 <tr>
-                    <th colspa="2">BPO Subscriber</th>
+                    <th colspan="2">Register Form Submission</th>
                 </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Email</td>
-                <td>' . $email . '</td>
-            </tr>
-        </tbody>';
+                <tr>
+                    <td>First Name</td>
+                    <td>' . $first_name . '</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>' . $last_name . '</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>' . $email . '</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>' . $phone . '</td>
+                </tr>
+                <tr>
+                    <td>Working with Realtor</td>
+                    <td>' . $working_with_realtor . '</td>
+                </tr>
+                <tr>
+                    <td>Brokerage</td>
+                    <td>' . $brokerage . '</td>
+                </tr>
+                <tr>
+                    <td>Contact Method</td>
+                    <td>' . $contact_method_str . '</td>
+                </tr>
+                <tr>
+                    <td>Interested In</td>
+                    <td>' . $interested_in . '</td>
+                </tr>
+                <tr>
+                    <td>Heard About Us</td>
+                    <td>' . $heard_about_us . '</td>
+                </tr>
+            </tbody>
+        </table>';
     }
 
 

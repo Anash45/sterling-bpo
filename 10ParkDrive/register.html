@@ -61,7 +61,7 @@
                 <div class="container">
                     <h2 class="text-center title-md mb-sm-5 mb-4" data-aos="fade-up" data-aos-duration="1500">Registration</h2>
                     <p class="mb-5 text-dark" data-aos="fade-up" data-aos-duration="1500">Register To Speak With One Of Our Sales Executive.</p>
-                    <form action="./forms/formProcess.php" method="post">
+                    <form action="./forms/formProcess.php" method="post" class="registerForm">
                         <div class="row" data-aos="fade-up" data-aos-duration="1500">
                             <div class="col-md-6 mb-5">
                                 <input type="text" name="first_name" id="first_name" class="form-control"
@@ -101,21 +101,21 @@
                                 <label class="d-block">Preferred contact method</label>
                                 <div class="d-flex align-items-center gap-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="contact-call" value="call">
+                                        <input class="form-check-input" type="checkbox" id="contact-call" name="contact_method[]" value="call">
                                         <label class="form-check-label" for="contact-call">Call</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="contact-text" value="text">
+                                        <input class="form-check-input" type="checkbox" id="contact-text" name="contact_method[]" value="text">
                                         <label class="form-check-label" for="contact-text">Text</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="contact-email"
-                                            value="email">
+                                            name="contact_method[]" value="email">
                                         <label class="form-check-label" for="contact-email">Email</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="contact-whatsapp"
-                                            value="whatsapp">
+                                            name="contact_method[]" value="whatsapp">
                                         <label class="form-check-label" for="contact-whatsapp">WhatsApp</label>
                                     </div>
                                 </div>
